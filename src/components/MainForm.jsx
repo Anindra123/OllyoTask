@@ -84,27 +84,48 @@ export default function MainForm() {
           setCompanyName={setCompanyName}
         />
       )}
-      {progressCount === 0 && JSON.stringify({ Company_Name: companyName })}
-      <div className="btn-group">
-        {progressCount === 1 ? (
+      {progressCount === 0 &&
+        JSON.stringify({
+          Personal_Info: { Name: name, Email: email, Phone: phone },
+          Education: {
+            Education_Level: educationLevel,
+            Study_Field: studyField,
+          },
+          Professional: { Company_Name: companyName, Position: position },
+        })}
+      {progressCount > 0 && (
+        <div className="btn-group">
+          {progressCount === 1 ? (
+            <a className="btn prev disabled" onClick={handlePrevious}>
+              Previous
+            </a>
+          ) : (
+            <a className="btn prev" onClick={handlePrevious}>
+              Previous
+            </a>
+          )}
+          {progressCount === 3 ? (
+            <a className="btn submit " onClick={handleSubmit}>
+              Submit
+            </a>
+          ) : (
+            <a className="btn submit" onClick={handleSubmit}>
+              Next
+            </a>
+          )}
+        </div>
+      )}
+      {progressCount === 0 && (
+        <div className="btn-group">
           <a className="btn prev disabled" onClick={handlePrevious}>
             Previous
           </a>
-        ) : (
-          <a className="btn prev" onClick={handlePrevious}>
-            Previous
-          </a>
-        )}
-        {progressCount === 3 ? (
-          <a className="btn submit " onClick={handleSubmit}>
+
+          <a className="btn submit disabled " onClick={handleSubmit}>
             Submit
           </a>
-        ) : (
-          <a className="btn submit" onClick={handleSubmit}>
-            Next
-          </a>
-        )}
-      </div>
+        </div>
+      )}
     </form>
   );
 }
