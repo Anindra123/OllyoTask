@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --progresss: #3c76f6;
+}
+
+.personal-form {
+  min-width: 480px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.start-section {
+  max-width: 331px;
+  margin-bottom: 48px;
+}
+
+.main-heading {
+  margin-bottom: 16px;
+  margin-top: 31px;
+}
+.sub-heading {
+  margin-bottom: 48px;
+}
+.main-heading > p {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  font-feature-settings: "clig" off, "liga" off;
+}
+.sub-heading > p {
+  color: rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.progressbar {
+  display: flex;
+  column-gap: 54px;
+  width: 100%;
+}
+
+.progress-box {
+  width: 72px;
+}
+.progress-box > .progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.progress-box > .progress > .progress-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: var(--progresss);
+  color: #fff;
+}
+
+.progress-box > .progress > .progress-1.not-progressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #dadada;
+}
+
+.progress-box > .progress > .progress-1.next-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 1px solid var(--progresss);
+  background-color: #fff;
+}
+.progress-box > .progress > .progress-1.next-progress > .progress-number {
+  color: #4b4b4b;
+
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.progress-box > .progress > .inner-line.not-progressed {
+  background-color: #dadada;
+}
+
+.progress-box > .progress > .inner-line {
+  width: 93px;
+  position: absolute;
+  height: 2px;
+  background-color: var(--progresss);
+  left: 53px;
+}
+
+.progress-box > .progress-title {
+  color: rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.input-section {
+  width: 416px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.input-group > .input-title {
+  margin-bottom: 8px;
+}
+
+.input-group > .input-title > p {
+  color: #000;
+
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+}
+.required-symbol {
+  color: red;
+}
+
+input {
+  background-color: #dadada;
+  border: 0;
+  width: 100%;
+  border-radius: 3px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  color: #000;
+  outline: 0;
+}
+.btn-group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  column-gap: 1rem;
+  margin-bottom: 84px;
+}
+.btn {
+  padding: 10px 18px;
+  background-color: var(--progresss);
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  font-feature-settings: "clig" off, "liga" off;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.submit:hover {
+  background-color: #0944c3;
+  color: #fff;
+}
+.btn.prev:hover {
+  background-color: #4b4b4b;
+  color: #000;
+}
+.btn.disabled {
+  background-color: #fff;
+  color: rgba(122, 124, 133, 0.4);
+  pointer-events: none;
+}
+
+select {
+  background-color: #dadada;
+  border: 0;
+  width: 416px !important;
+  border-radius: 3px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  color: #000;
+  outline: 0;
+}
